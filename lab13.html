@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Gallery + Bình luận & Bản đồ</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+
+    iframe[name="videoFrame"] {
+      width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+
+    .thumb {
+      width: 180px;
+      height: 130px;
+      margin-bottom: 15px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .thumb:hover {
+      transform: scale(1.05);
+    }
+
+    .extra-content {
+      margin: 40px auto;
+      max-width: 1000px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .extra-content h2 {
+      margin-bottom: 10px;
+    }
+
+    .map {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .comment-box {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Phần gallery video -->
+<div class="main-container">
+  <div class="container">
+    <iframe name="videoFrame" src="video1.html"></iframe>
+
+    <div class="sidebar">
+      <a href="video1.html" target="videoFrame">
+        <img src="images/tải xuống (3).jpg" class="thumb" alt="Ảnh 1">
+      </a>
+      <a href="video2.html" target="videoFrame">
+        <img src="images/tải xuống.jpg" class="thumb" alt="Ảnh 2">
+      </a>
+      <a href="video3.html" target="videoFrame">
+        <img src="images/tải xuống (1).jpg" class="thumb" alt="Ảnh 3">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Phần bổ sung: Bình luận & Bản đồ -->
+<div class="extra-content">
+  <h2>Bình luận</h2>
+  <div class="comment-box">
+    <!-- Facebook Comments Plugin -->
+    <div class="fb-comments" data-href="http://your-website.com" data-width="100%" data-numposts="5"></div>
+  </div>
+
+  <h2>Google Maps</h2>
+  <iframe class="map" 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.502934186259!2d106.66017201462291!3d10.77143176224771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1f64e7a179%3A0x68a8a4e5f1a1b3d5!2zMTIwIMSQLiBOZ3V54buFbiBI4buNYyBUaMOhaSwgUGjGsOG7nW5nIDcsIFF14bqtbiAxMCwgVGjDoG5oIHBo4buRIEjDoCBO4buZaQ!5e0!3m2!1sen!2s!4v1614185783604!5m2!1sen!2s"
+    allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0" nonce="abc123"></script>
+
+</body>
+</html>
